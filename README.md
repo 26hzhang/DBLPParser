@@ -1,5 +1,7 @@
 # DBLP Dataset Parser
 
+![Authour](https://img.shields.io/badge/Author-Zhang%20Hao%20(Isaac%20Changhau)-blue.svg) ![Python](https://img.shields.io/badge/Python-3.6.5-brightgreen.svg)
+
 It is a python parser for [DBLP dataset](https://dblp.uni-trier.de/), the XML format dumped file can be downloaded [here](http://dblp.org/xml/).
 
 This parser requires `dtd` file, so make sure you have both `dblp-XXX.xml` (dataset) and `dblp-XXX.dtd` files. Note that you also should guarantee that both `xml` and `dtd` files are in the same directory, and the name of `dtd` file shoud same as the name given in the `<!DOCTYPE>` tag of the `xml` file. Such information can be easily accessed through `head dblp-XXX.xml` command. As shown below
