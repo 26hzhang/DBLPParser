@@ -201,7 +201,7 @@ def parse_publications(dblp_path, save_path, save_to_csv=False, include_key=Fals
 
 def main():
     dblp_path = 'dataset/dblp.xml'
-    save_path = 'article.json'
+    save_path = 'dataset/article.json'
     try:
         context_iter(dblp_path)
         log_msg("LOG: Successfully loaded \"{}\".".format(dblp_path))

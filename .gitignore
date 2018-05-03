@@ -101,5 +101,6 @@ ENV/
 .mypy_cache/
 
 # mac
+.idea/
 .DS_Store
 *.DS_Store
