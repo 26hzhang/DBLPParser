@@ -172,9 +172,19 @@ def parse_article(dblp_path, save_path, save_to_csv=False, include_key=False):
     log_msg("Features information: {}".format(str(info[2])))
 
 
-def parse_proceedings(dblp_path, save_path, save_to_csv=False, include_key=False):
-    type_name = ["inproceedings", "proceedings"]
+def parse_inproceedings(dblp_path, save_path, save_to_csv=False, include_key=False):
+    type_name = ["inproceedings"]
     features = ['title', 'author', 'year', 'pages', 'booktitle']
+    info = parse_entity(dblp_path, save_path, type_name, features, save_to_csv=save_to_csv, include_key=include_key)
+    log_msg('Total inproceedings found: {}, inproceedings contain all features: {}, inproceedings contain part of '
+            'features: {}'.format(info[0] + info[1], info[0], info[1]))
+    log_msg("Features information: {}".format(str(info[2])))
+
+
+def parse_proceedings(dblp_path, save_path, save_to_csv=False, include_key=False):
+    type_name = ["proceedings"]
+    features = ['title', 'editor', 'year', 'booktitle', 'series', 'publisher']
+    # Other features are 'volume','isbn' and 'url'.
     info = parse_entity(dblp_path, save_path, type_name, features, save_to_csv=save_to_csv, include_key=include_key)
     log_msg('Total proceedings found: {}, proceedings contain all features: {}, proceedings contain part of '
             'features: {}'.format(info[0] + info[1], info[0], info[1]))
